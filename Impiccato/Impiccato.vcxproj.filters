@@ -21,9 +21,21 @@
     <ClCompile Include="gui.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
+    <ClCompile Include="word.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="gui.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="word.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
   </ItemGroup>
