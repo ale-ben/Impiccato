@@ -3,9 +3,13 @@
 #include <iostream>
 #include <string>
 
-class gui
+using namespace std;
+
+class Gui
 {
 public:
-	gui();
+	string getWord();
+	char getLength();
+	Gui();
 };
 

@@ -1,15 +1,18 @@
 #include <iostream>
 #include <string>
 
+#include "Word.h"
+#include "Engine.h"
+#include "Gui.h"
+
 using namespace std;
 
 int main() {
-	string word;
-	cout << "Choose a word: ";
-	cin >> word;
-	int lenght = word.length();
-	for (int i = 0; i < lenght; i++) {
-		cout << word[i] << endl;
-	}
+	Word Word;
+	Engine Engine(Word.getWordLength());
+	Gui Gui;
+
+	
+
 	system("PAUSE");
 }
