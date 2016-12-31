@@ -1,6 +1,5 @@
 #pragma once
 
-#include <iostream>
 #include <string>
 
 #include "Word.h"
@@ -10,11 +9,10 @@ using namespace std;
 class Engine
 {
 private:
-	int length;
-	char letter;
+	Word word;
+	int _length;
 public:
-	Engine(int leng);
-	~Engine();
+	Engine(Word wo);
 	bool checkLetter(char lett);
 };
 

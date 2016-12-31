@@ -4,14 +4,12 @@
 
 Word::Word()
 {
-	cout << "Input the word, be carefull not to be spied: ";
-	cin >> word;
-	system("CLS");
+	
 }
 
-Word::Word(string wSet)
+Word::Word(string w)
 {
-	word = wSet;
+	word = w;
 }
 
 char Word::getLetter(int lNum)

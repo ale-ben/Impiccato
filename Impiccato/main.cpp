@@ -2,17 +2,15 @@
 #include <string>
 
 #include "Word.h"
-#include "Engine.h"
 #include "Gui.h"
+#include "Engine.h"
 
 using namespace std;
 
 int main() {
-	Word Word;
-	Engine Engine(Word.getWordLength());
-	Gui Gui;
-
-	
+	Gui gui;
+	Word word(gui.getWord());
+	Engine Engine(word);
 
 	system("PAUSE");
 }

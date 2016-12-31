@@ -2,22 +2,19 @@
 
 
 
-Engine::Engine(int leng)
+Engine::Engine(Word wo)
 {
-	length = leng;
-	letter = 0;
+	word = wo;
+	_length = word.getWordLength();
 }
 
-
-Engine::~Engine()
-{
-}
 
 bool Engine::checkLetter(char lett)
 {
-	int length;
-	char chara;
+	char _letter = '.';
 	bool isTrue = false;
-	for (int i = 0; i )
+	for (int i = 0; i != _length; i++) {
+		if (word.getLetter(i) == _letter) isTrue = true;
+	}
 	return isTrue;
 }

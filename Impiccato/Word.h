@@ -1,6 +1,5 @@
 #pragma once
 
-#include <iostream>
 #include <string>
 
 using namespace std;
@@ -11,7 +10,7 @@ private:
 	string word;
 public:
 	Word();
-	Word(string word);
+	Word(string w);
 	char getLetter(int lNum);
 	int getWordLength();
 };

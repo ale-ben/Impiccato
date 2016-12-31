@@ -9,7 +9,6 @@ class Gui
 {
 public:
 	string getWord();
-	char getLength();
+	char getChar();
 	Gui();
 };
-

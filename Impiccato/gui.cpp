@@ -11,9 +11,12 @@ string Gui::getWord()
 	return string(word);
 }
 
-char Gui::getLength()
+char Gui::getChar()
 {
-	return 0;
+	char chara;
+	cout << "Inserct a letter: ";
+	cin >> chara;
+	return (chara);
 }
 
 Gui::Gui()
