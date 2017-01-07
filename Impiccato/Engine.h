@@ -2,9 +2,18 @@
 
 #include <string>
 
-#include "Word.h"
-
 using namespace std;
+
+class Word
+{
+private:
+	string _word;
+public:
+	Word();
+	Word(string w);
+	char getLetter(int lNum);
+	int getWordLength();
+};
 
 class Engine
 {
@@ -15,4 +24,3 @@ public:
 	Engine(Word wo);
 	bool checkLetter(char lett);
 };
-

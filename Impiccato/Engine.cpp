@@ -1,6 +1,30 @@
 #include "Engine.h"
 
 
+// Word management class
+
+
+Word::Word()
+{
+
+}
+
+Word::Word(string w)
+{
+	_word = w;
+}
+
+char Word::getLetter(int lNum)
+{
+	return (_word[lNum]);
+}
+
+int Word::getWordLength()
+{
+	return (_word.length());
+}
+
+
 
 Engine::Engine(Word wo)
 {

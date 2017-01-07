@@ -6,12 +6,12 @@ using namespace std;
 
 class Word
 {
-private: 
-	string word;
+private:
+	string _word;
+	int _wLength;
 public:
 	Word();
-	Word(string w);
-	char getLetter(int lNum);
-	int getWordLength();
+	Word(string word);
+	bool isTheRightOne(char letter);
 };
 

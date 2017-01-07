@@ -1,23 +1,22 @@
-#include "word.h"
+#include "Word.h"
 
 
 
 Word::Word()
 {
-	
+
 }
 
-Word::Word(string w)
+Word::Word(string word)
 {
-	word = w;
+	_word = word;
+	_wLength = _word.length();
 }
 
-char Word::getLetter(int lNum)
+bool Word::isTheRightOne(char letter)
 {
-	return (word[lNum]);
-}
-
-int Word::getWordLength()
-{
-	return (word.length());
+	for (int i = 0; i != _wLength; i++) {
+		if (_word[i] == letter) return true;
+	}
+	return false;
 }

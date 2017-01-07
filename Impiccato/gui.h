@@ -11,4 +11,5 @@ public:
 	string getWord();
 	char getChar();
 	Gui();
+	void updateWord();
 };

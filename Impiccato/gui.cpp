@@ -13,10 +13,10 @@ string Gui::getWord()
 
 char Gui::getChar()
 {
-	char chara;
+	char letter;
 	cout << "Inserct a letter: ";
-	cin >> chara;
-	return (chara);
+	cin >> letter;
+	return (letter);
 }
 
 Gui::Gui()

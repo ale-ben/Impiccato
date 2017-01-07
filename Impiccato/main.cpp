@@ -1,16 +1,16 @@
 #include <iostream>
 #include <string>
 
-#include "Word.h"
 #include "Gui.h"
-#include "Engine.h"
+#include "Word.h"
 
 using namespace std;
 
 int main() {
 	Gui gui;
 	Word word(gui.getWord());
-	Engine Engine(word);
+	
+	cout << word.isTheRightOne(gui.getChar());
 
 	system("PAUSE");
 }
