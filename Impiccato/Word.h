@@ -7,11 +7,11 @@ using namespace std;
 class Word
 {
 private:
-	string _word;
+	string _word, _letterUsed;
 	int _wLength;
 public:
 	Word();
 	Word(string word);
-	int isTheRightOne(string *pWord, char letter);
+	bool isTheRightOne(string *pWord, char letter);
 	int getWLength();
 };

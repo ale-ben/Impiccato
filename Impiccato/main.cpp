@@ -9,11 +9,12 @@ int main() {
 	pointWord = &pWord;
 	Word word(getWord());
 	initWord(pointWord, word.getWLength());	
-	int noCorrects = 0;
+	int noOfAttempts = 0;
 	while (!lastOne(pWord)) {
+		noOfAttempts++;
 		printWord(pWord);
-		noCorrects += word.isTheRightOne(pointWord, getChar());
+		word.isTheRightOne(pointWord, getChar());
 	}
-	cout << endl <<"You won";
+	cout << endl << endl <<"You won!" << endl << endl << "You guessed the word in " << noOfAttempts << " attempts";
 	system("PAUSE");
 }

@@ -37,7 +37,6 @@ void updateWord(string *pWord, int pos, char letter)
 
 void printWord(string pWord)
 {
-	system("CLS");
 	cout << endl << endl;
 	for (int i = 0; i != pWord.length(); i++) {
 		cout << " " << pWord[i];
@@ -50,6 +49,23 @@ bool lastOne(string word)
 		if (word[i] == '*') return false;
 		}
 	return true;
+}
+
+void succeed(int noCorrects)
+{
+	system("CLS");
+	if (noCorrects == 0) {
+		cout << endl << "Nope, that's not correct :(";
+	}
+	else {
+		cout << endl << "Yep, you were right!" << endl << "You guessed " << noCorrects << " letters!";
+	}
+}
+
+void used(char c)
+{
+	system("CLS");
+	cout << endl << "You already used " << c << "!" << endl << "You Idiot!";
 }
 
 /*
