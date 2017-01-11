@@ -1,7 +1,5 @@
 #include "Word.h"
 
-
-
 Word::Word()
 {
 
@@ -13,10 +11,19 @@ Word::Word(string word)
 	_wLength = _word.length();
 }
 
-bool Word::isTheRightOne(char letter)
+int Word::isTheRightOne(string *pWord, char letter)
 {
+	int noOfCorrects = 0;
 	for (int i = 0; i != _wLength; i++) {
-		if (_word[i] == letter) return true;
+		if (_word[i] == letter) {
+			updateWord(pWord, i, letter);
+			noOfCorrects++;
+		}
 	}
-	return false;
+	return noOfCorrects;
+}
+
+int Word::getWLength()
+{
+	return _word.length();
 }

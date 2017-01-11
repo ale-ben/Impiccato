@@ -2,14 +2,18 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
-class Gui
-{
-public:
-	string getWord();
-	char getChar();
-	Gui();
-	void updateWord();
-};
+string getWord();
+char getChar();
+/*
+void initWord(int lengt);
+void updateWord(int pos, char letter);
+void printWord();
+*/
+void initWord(string *pWord, int lengt);
+void updateWord(string *pWord, int pos, char letter);
+void printWord(string pWord);
+bool lastOne(string word);

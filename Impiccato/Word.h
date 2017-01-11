@@ -1,6 +1,6 @@
 #pragma once
 
-#include <string>
+#include "gui.h"
 
 using namespace std;
 
@@ -12,6 +12,6 @@ private:
 public:
 	Word();
 	Word(string word);
-	bool isTheRightOne(char letter);
+	int isTheRightOne(string *pWord, char letter);
+	int getWLength();
 };
-

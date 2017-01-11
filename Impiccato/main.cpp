@@ -1,16 +1,19 @@
-#include <iostream>
-#include <string>
-
-#include "Gui.h"
 #include "Word.h"
+#include <iostream>
 
 using namespace std;
 
 int main() {
-	Gui gui;
-	Word word(gui.getWord());
-	
-	cout << word.isTheRightOne(gui.getChar());
-
+	string pWord;
+	string *pointWord;
+	pointWord = &pWord;
+	Word word(getWord());
+	initWord(pointWord, word.getWLength());	
+	int noCorrects = 0;
+	while (!lastOne(pWord)) {
+		printWord(pWord);
+		noCorrects += word.isTheRightOne(pointWord, getChar());
+	}
+	cout << endl <<"You won";
 	system("PAUSE");
 }
