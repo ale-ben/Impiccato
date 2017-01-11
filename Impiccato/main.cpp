@@ -15,6 +15,6 @@ int main() {
 		printWord(pWord);
 		word.isTheRightOne(pointWord, getChar());
 	}
-	cout << endl << endl <<"You won!" << endl << endl << "You guessed the word in " << noOfAttempts << " attempts";
+	won(noOfAttempts);
 	system("PAUSE");
 }

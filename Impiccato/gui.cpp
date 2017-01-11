@@ -68,6 +68,12 @@ void used(char c)
 	cout << endl << "You already used " << c << "!" << endl << "You Idiot!";
 }
 
+void won(int noAtt)
+{
+	cout << endl << endl << "You won!" << endl << endl << "You guessed the word in " << noAtt << " attempts" << endl;
+
+}
+
 /*
 void initWord(int length)
 {
