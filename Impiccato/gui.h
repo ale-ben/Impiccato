@@ -19,4 +19,4 @@ void printWord(string pWord);
 bool lastOne(string word);
 void succeed(int noCorrects);
 void used(char c);
-void won(int noAtt);
+void won(int noAtt, string word, int length);

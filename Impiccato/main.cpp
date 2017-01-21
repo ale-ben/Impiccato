@@ -15,6 +15,6 @@ int main() {
 		printWord(pWord);
 		word.isTheRightOne(pointWord, getChar());
 	}
-	won(noOfAttempts);
+	won(noOfAttempts, pWord, word.getWLength());
 	system("PAUSE");
 }

@@ -32,5 +32,11 @@
     <ClInclude Include="Word.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="..\resource.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

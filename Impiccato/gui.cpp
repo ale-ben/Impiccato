@@ -68,31 +68,10 @@ void used(char c)
 	cout << endl << "You already used " << c << "!" << endl << "You Idiot!";
 }
 
-void won(int noAtt)
+void won(int noAtt, string word, int length)
 {
-	cout << endl << endl << "You won!" << endl << endl << "You guessed the word in " << noAtt << " attempts" << endl;
+	cout << endl << endl << "You won!" << endl << endl << "The word was: " << word;
+	cout << endl << "It was " << length << " letters long.";
+	cout << endl << "It took you " << noAtt << " attempts to guess it." << endl;
 
 }
-
-/*
-void initWord(int length)
-{
-	for (int i = 0; i != length; i++) {
-		pWord[i] = '*';
-	}
-}
-
-void updateWord(int pos, char letter)
-{
-	pWord[pos] = letter;
-}
-
-void printWord()
-{
-	system("CLS");
-	cout << endl << endl;
-	for (int i = 0; i != pWord.length(); i++) {
-		cout << " " << pWord[i];
-	}
-}
-*/
