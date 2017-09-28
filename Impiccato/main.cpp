@@ -4,17 +4,22 @@
 using namespace std;
 
 int main() {
+	int life = 6;
+	int errors = 0;
 	string pWord;
 	string *pointWord;
 	pointWord = &pWord;
 	Word word(getWord());
 	initWord(pointWord, word.getWLength());	
 	int noOfAttempts = 0;
-	while (!lastOne(pWord)) {
+	while ((!lastOne(pWord)) && (errors != life)) {
 		noOfAttempts++;
 		printWord(pWord);
-		word.isTheRightOne(pointWord, getChar());
+		if (word.isTheRightOne(pointWord, getChar()) == 1) {
+			errors++;
+		}
+		drawStatus(life, errors);
 	}
-	won(noOfAttempts, pWord, word.getWLength());
+	end(noOfAttempts, life, errors, pWord, word.getWLength());
 	system("PAUSE");
 }

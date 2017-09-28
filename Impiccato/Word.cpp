@@ -29,8 +29,8 @@ bool Word::isTheRightOne(string *pWord, char letter)
 		}
 	}
 	succeed(noOfCorrects);
-	if (noOfCorrects != 0) return (1);
-	else return(0);
+	if (noOfCorrects != 0) return (0);
+	else return(1);
 }
 
 int Word::getWLength()

@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 
 using namespace std;
 
@@ -19,4 +20,5 @@ void printWord(string pWord);
 bool lastOne(string word);
 void succeed(int noCorrects);
 void used(char c);
-void won(int noAtt, string word, int length);
+void end(int noAtt, int life, int errors, string word, int length);
+void drawStatus(int difficulty, int status);

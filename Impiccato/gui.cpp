@@ -68,10 +68,50 @@ void used(char c)
 	cout << endl << "You already used " << c << "!" << endl << "You Idiot!";
 }
 
-void won(int noAtt, string word, int length)
+void end(int noAtt, int life, int errors, string word, int length)
 {
-	cout << endl << endl << "You won!" << endl << endl << "The word was: " << word;
-	cout << endl << "It was " << length << " letters long.";
-	cout << endl << "It took you " << noAtt << " attempts to guess it." << endl;
+	system("cls");
+	if (errors <= life) {
+		cout << endl << endl << "You won!" << endl << endl << "The word was: " << word;
+		cout << endl << "It was " << length << " letters long.";
+		cout << endl << "It took you " << noAtt << " attempts to guess it.";
+		cout << endl << "You had " << life << " lifes, You made " << errors << " errors." << endl;
+	}
+	else {
+		cout << endl << endl << "You lost :(" << endl << endl << "The word was: " << word;
+		cout << endl << "It was " << length << " letters long.";
+		cout << endl << "It took you " << noAtt << " attempts to guess it.";
+		cout << endl << "You had " << life << " lifes, You made " << errors << " errors." << endl;
+	}
 
+
+}
+
+void drawStatus(int difficulty, int status)
+{
+	string line;
+	string fpath = "C:/Users/alebe/OneDrive/Documents/coding/c++/Projects/Impiccato/Impiccato/Resources/HangmanTXT/";
+	string fName;
+	if ((status != difficulty) && (status != 0)) {
+		fName = fpath + "/" + to_string(difficulty) + "/" + to_string(status) + ".txt";
+	}
+	else if (status == 0) {
+		fName = fpath + "/" + "alive.txt";
+	} else if (status == difficulty) {
+		fName = fpath + "/" + "dead.txt";
+	}
+	ifstream myfile(fName);
+	if (myfile.is_open())
+	{
+
+		while (getline(myfile, line))
+		{
+			cout << line << '\n';
+		}
+		myfile.close();
+	}
+
+	else {
+		cout << "Unable to open file";
+	}
 }
